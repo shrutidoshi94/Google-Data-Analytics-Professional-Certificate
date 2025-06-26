@@ -14,7 +14,7 @@ But guess what? I survived! And dare I say… I kinda loved it?
 What’s Inside This Repository?
 
 1. 📚 /Notes/
-Chapter-wise notes from the course. Neatly organized, occasionally color-coded, and often annotated with “What just happened?” side comments.
+Chapter-wise content from the course. Neatly organized, with visuals.
 
 2. 🕵️‍♀️ /Case_Studies/
 Real-world case studies where I flexed my newfound data muscles. Warning: Contains traces of enthusiasm and some overuse of charts.
