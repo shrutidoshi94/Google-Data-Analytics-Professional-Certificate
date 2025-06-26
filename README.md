@@ -1,6 +1,6 @@
 # My Google Data Analytics Journey – From Zero to Data Hero!
 
-
+![SDlovesGDA](SDlovesGDA.gif)
 
 Welcome to my humble archive of chapter-wise notes and case studies created during my epic quest to earn the **Google Data Analytics Professional Certificate** on **Coursera**! 🎓
 
