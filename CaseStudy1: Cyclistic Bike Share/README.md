@@ -72,4 +72,6 @@ The analysis question is:
 
 > How do annual members and casual riders use Cyclistic bikes differently?
 
-The cleaned data is imported into Tableau for analysis and the figures plotted are displayed in the following.
+The cleaned data is imported into Tableau for analysis and the figures plotted are displayed below:
+
+

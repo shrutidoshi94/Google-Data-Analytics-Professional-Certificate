@@ -23,17 +23,11 @@ SELECT
   started_at,
   ended_at,
   TIMESTAMP_DIFF(ended_at, started_at, MINUTE) AS ride_duration_minutes,
-  EXTRACT(DAYOFWEEK FROM started_at) AS day_of_week
-  EXTRACT(MONTH FROM started_at) AS month,
+  EXTRACT(DAYOFWEEK FROM started_at) AS day_of_week,
+  EXTRACT(MONTH FROM started_at) AS month
 FROM ranked_rides
 WHERE
   row_num = 1                                 -- Remove duplicates
-  AND start_station_id IS NOT NULL
-  AND start_station_name IS NOT NULL
-  AND end_station_id IS NOT NULL
-  AND end_station_name IS NOT NULL
-  AND end_lat IS NOT NULL
-  AND end_lng IS NOT NULL
   AND TIMESTAMP_DIFF(ended_at, started_at, MINUTE) >= 0         -- No negative trips
 
 /* Result:

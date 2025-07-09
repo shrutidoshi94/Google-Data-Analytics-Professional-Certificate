@@ -145,6 +145,19 @@ WHERE row_num = 1
 /*Result:
 This query counts the number of unique ride_ids by selecting the most recent entry for each ride, ensuring that we only get the latest entry for each ride with duplicate ride_ids. There are 6917033 rows.*/
 
+WITH ranked_rides AS (
+  SELECT *,
+         ROW_NUMBER() OVER (PARTITION BY ride_id ORDER BY started_at DESC) AS row_num
+  FROM `gdacoursework-456504.DivvyTripData.DivvyTrips`
+)
+
+SELECT row_num
+FROM ranked_rides
+GROUP BY row_num
+
+/*Result:
+The results indicate that there are only 1 duplicate row for each duplicate ride_id.*/
+
 SELECT COUNT(*)
 FROM `gdacoursework-456504.DivvyTripData.DivvyTrips`
 WHERE start_lat NOT BETWEEN -90 AND 90
