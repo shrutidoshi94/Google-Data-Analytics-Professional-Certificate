@@ -54,7 +54,7 @@ I ran the queries for each column from left to right in order to determine the *
 * There are **58 ride_id with negative ride durations**.
 * There are **no start or end latitude and latitude outside the acceptable range**.
 
-[asset1](./assets/asset1.png)
+![asset1](./assets/asset1.png)
 
 3. **Data Cleaning**
 
@@ -66,12 +66,105 @@ A new table is created in the database using [query](./CaseStudy1: Cyclist Bike 
 
 ***Note:*** The entries with NULL start_station_id, start_station_name, end_station_id, end_station_name, end_lat, end_lag have not been removed since missing values will not impact our analysis. But removing the same will skew our analysis results.
 
-5. **Data Analysis**
+4. **Data Analysis**
 
 The analysis question is:
 
 > How do annual members and casual riders use Cyclistic bikes differently?
 
-The cleaned data is imported into Tableau for analysis and the figures plotted are displayed below:
+The cleaned data is imported into Tableau for analysis and analysis is carried out by plotting data on different graphs.
 
+![Number of Rides](./assets/No%20of%20Rides.png)
 
+**User Type Distribution**
+
+- Members account for 62.6% of total rides
+- Casual riders make up the remaining 37.4%
+- This indicates that members are the dominant user group in terms of ride frequency
+
+![BikeType](./assets/BikeType.png)
+
+**Bike Type Preferences**
+
+- Members prefer electric bikes for speed and convenience, with nearly equal ride duration across bike types
+- Casual riders use classic and electric bikes almost equally but spend significantly more time on classic bikes
+- Suggests members prioritize the speed and convenience.
+
+![Average Ride Duration](./assets/Avg%20Ride%20Duration.png)
+
+**Ride Duration**
+
+- Casual riders consistently have longer average ride durations across all months
+- Members have shorter but more frequent rides
+- Suggests: Casual users ride for leisure; members use bikes for efficiency/commuting
+
+![Number of Rides per Month](./assets/No%20of%20Rides%20per%20Month.png)
+
+**Rides by Month**
+
+- Peak usage for both groups occurs in May and June
+- Likely influenced by favorable weather conditions or seasonal programs
+- Indicates an opportunity to target membership promotions in spring/summer
+
+![Rides per Weekday](./assets/RidesWeekday.png)
+
+**Rides by Day of the Week**
+
+- Members ride more during weekdays, indicating commuting behavior
+- Casual riders ride more during weekends, indicating leisure/recreational use
+- Clear behavioral divide between user groups
+
+![Dashboard](./assets/Cyclists%20Bike%20Share%2024-25.png)
+
+**Summary Analysis**
+
+- Casual riders = longer, leisure-oriented, weekend usage
+- Members = frequent, short, commute-oriented, weekday usage
+- There are seasonal and behavioral patterns that can inform targeted marketing strategies
+
+## Recommendations for Cyclistic Marketing Strategy
+
+### Target Casual Riders with Spring/Summer Promotions
+
+- Launch limited-time offers during May–June, when casual ridership peaks.
+- Use digital ads and mobile push notifications to convert casual riders into members during high engagement months.
+
+### Promote Weekday Commuter Benefits
+
+- Emphasize time and cost savings of annual memberships for weekday commuters.
+- Position membership as a practical alternative to car or public transport for short daily trips.
+
+### Leverage Bike Type Preferences
+
+- Create marketing segments based on bike preferences:
+- Promote electric bikes to casual users with convenience-focused messaging.
+- Highlight classic bikes to leisure riders for scenic or tourist routes.
+
+### Weekend “Trial-to-Membership” Campaigns
+
+- Offer weekend passes with an upsell to annual memberships.
+- Use QR codes on bikes/docks and email follow-ups to encourage conversion.
+
+### Behavior-Based Email Segmentation
+
+- Use ride duration, frequency, and day-of-week patterns to segment users:
+- Casual users riding more than 2x/month should receive upgrade offers.
+- Frequent weekend users can be nudged with leisure-centric benefits.
+
+### Introduce Loyalty/Referral Programs
+
+- Encourage existing members to refer casual riders with incentives.
+- Gamify ridership milestones with discounts or rewards (e.g., 5th ride = discount offer).
+
+### In-App Behavioral Nudges
+
+- Notify casual riders about savings from membership after their 3rd ride in a 30-day period.
+- Show comparative stats like “You’ve spent $X more than a member this month!”
+
+****Missing Data That Could Have Enhanced the Analysis***
+
+- User demographics (age, gender, ZIP code) to segment audiences more precisely
+- Trip purpose (commute, leisure, fitness, etc.)
+- Weather data to confirm seasonal ride behavior
+- Marketing campaign data to measure past promotion effectiveness
+- Repeat casual user IDs to identify high-potential conversion targets
