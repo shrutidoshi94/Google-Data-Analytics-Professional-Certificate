@@ -43,30 +43,30 @@ I ran the queries for each column from left to right in order to determine the *
 
 **Conclusions Drawn:**
 
-* The dataset contains 13 variables with correct data types.
-* There are **no NULL ride_id** but **211 Duplicate ride_ids** exist.
-* There are **3 unique rideable types** in dataset: electric bike, classic bike, electric scooter.
-* There are **2 unique member types** in the dataset: member and casual
-* There are **1341897 instances of NULL start_station_id and start_station_name** but there are no cases where a start_station_name is missing, but the start_station_id is known elsewhere in the dataset.
-* There are **1380243 instances of NULL end_station_id and end_station_name** but there are no cases where an end_station_name is missing, but the end_station_id is known elsewhere in the dataset.
-* There are **7938 instances of NULL end_lat and end_lng**.
-* A new column for **ride duration** is required for analysis.
-* There are **58 ride_id with negative ride durations**.
-* There are **no start or end latitude and latitude outside the acceptable range**.
+- The dataset contains 13 variables with correct data types.
+- There are **no NULL ride_id** but **211 Duplicate ride_ids** exist.
+- There are **3 unique rideable types** in dataset: electric bike, classic bike, electric scooter.
+- There are **2 unique member types** in the dataset: member and casual
+- There are **1341897 instances of NULL start_station_id and start_station_name** but there are no cases where a start_station_name is missing, but the start_station_id is known elsewhere in the dataset.
+- There are **1380243 instances of NULL end_station_id and end_station_name** but there are no cases where an end_station_name is missing, but the end_station_id is known elsewhere in the dataset.
+- There are **7938 instances of NULL end_lat and end_lng**.
+- A new column for **ride duration** is required for analysis.
+- There are **58 ride_id with negative ride durations**.
+- There are **no start or end latitude and latitude outside the acceptable range**.
 
 ![asset1](./assets/asset1.png)
 
-3. **Data Cleaning**
+3.**Data Cleaning**
 
 A new table is created in the database using [query](./CaseStudy1: Cyclist Bike Share/Data Cleaning.sql) with following changes:
 
-* New columns added: ride_duration, weekday_of_trip, month_of_trip, row_number for duplicate ride_id
-* 211 Duplicate ride_id with less accuarte timestamp removed
-* Rides with negative ride duration removed
+- New columns added: ride_duration, weekday_of_trip, month_of_trip, row_number for duplicate ride_id
+- 211 Duplicate ride_id with less accuarte timestamp removed
+- Rides with negative ride duration removed
 
 ***Note:*** The entries with NULL start_station_id, start_station_name, end_station_id, end_station_name, end_lat, end_lag have not been removed since missing values will not impact our analysis. But removing the same will skew our analysis results.
 
-4. **Data Analysis**
+4.**Data Analysis**
 
 The analysis question is:
 
