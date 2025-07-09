@@ -1,5 +1,17 @@
 # Cyclistic Bike Share Case Study
 
+**Reference:** [CaseStudyPDF](./Case%20Study%201_How%20does%20a%20bike-share%20navigate%20speedy%20success.pdf).
+
+The following steps were followed for this case study, incorporating techniques and best practices learned during the Google Data Analytics Professional Certificate program:
+1.Ask – Identified the business problem: understanding how casual riders and annual members use Cyclistic bikes differently.
+2.Prepare – Sourced and organized 12 months of Cyclistic trip data.
+3.Process – Cleaned and transformed the data using tools like Excel, Google Sheets, and BigQuery.
+4.Analyze – Conducted descriptive analytics, created pivot tables, and generated insights with calculated fields.
+5.Share – Visualized findings using Tableau through charts and dashboards.
+6.Act – Proposed actionable recommendations to increase annual membership conversions based on the analysis.
+
+The same have been discussed in detail below.
+
 ## Ask
 
 ### Business Task Statement
@@ -39,7 +51,7 @@ The raw CSV files were uploaded to Google Cloud Storage under the bucket name: D
 
 2.**Data Exploration**
 
-I ran the queries for each column from left to right in order to determine the **data type** and to uncover any **missing values, outliers, inconsistencies, and errors** within the dataset. Refer [Analysing Data.sql](Google-Data-Analytics-Professional-Certificate/CaseStudy1: Cyclistic Bike Share/Analysing Data.sql) to refer to the queries run.
+I ran the queries for each column from left to right in order to determine the **data type** and to uncover any **missing values, outliers, inconsistencies, and errors** within the dataset. Refer [Analysing Data.sql](./Data%20Exploration.sql) to refer to the queries run.
 
 **Conclusions Drawn:**
 
@@ -58,7 +70,7 @@ I ran the queries for each column from left to right in order to determine the *
 
 3.**Data Cleaning**
 
-A new table is created in the database using [query](./CaseStudy1: Cyclist Bike Share/Data Cleaning.sql) with following changes:
+A new table is created in the database using [queries](./Data%20Cleaning.sql) with following changes:
 
 - New columns added: ride_duration, weekday_of_trip, month_of_trip, row_number for duplicate ride_id
 - 211 Duplicate ride_id with less accuarte timestamp removed
@@ -114,7 +126,7 @@ The cleaned data is imported into Tableau for analysis and analysis is carried o
 - Casual riders ride more during weekends, indicating leisure/recreational use
 - Clear behavioral divide between user groups
 
-![Dashboard](./assets/Cyclists%20Bike%20Share%2024-25.png)
+![Dashboard](./assets/Cyclists%20Bike%20Share%2024-25%20Dashboard.png)
 
 **Summary Analysis**
 
@@ -168,3 +180,7 @@ The cleaned data is imported into Tableau for analysis and analysis is carried o
 - Weather data to confirm seasonal ride behavior
 - Marketing campaign data to measure past promotion effectiveness
 - Repeat casual user IDs to identify high-potential conversion targets
+
+## Conclusion
+
+This analysis provides valuable insights into the preferences and behaviors of Cyclistic members and casual riders. By tailoring strategies to the identified differences and preferences, Cyclistic can effectively convert casual riders into potential members. Additional data would help confirm or refine the above conclusions.
